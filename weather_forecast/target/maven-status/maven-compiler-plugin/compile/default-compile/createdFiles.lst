@@ -1,0 +1,8 @@
+com\weather\execute.class
+com\weather\WeatherEntity.class
+com\weather\UserController.class
+ConsoleLoggerSingleton\ConsoleLogger.class
+com\weather\Weather.class
+com\weather\SAd.class
+com\weather\Application.class
+com\weather\Schedu.class

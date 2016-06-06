@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Weather forecast</title>
+    <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" media="screen" />
+</head>
+<style>
+    body{
+        color: red;
+    }
+
+    h1{
+
+text-shadow:1px 1px 1px rgba(255,241,43,1);font-weight:normal;color:#0C7D04;letter-spacing:1pt;word-spacing:2pt;font-size:100px;text-align:center;font-family:comic sans, comic sans ms, cursive, verdana, arial, sans-serif;line-height:1;
+
+    }
+    th{
+        color: blue;
+        text-align: center;
+        font-size: 15px;
+        }
+
+    td{
+        color: black;
+        text-align: center;
+        border-style: solid;
+        border-right: thick #ff0000;
+    }
+    .login{
+        text-shadow:1px 1px 1px rgba(255,251,145,1);font-weight:bold;text-decoration:underline;font-style:oblique;color:#000000;background-color:#FFAB19;text-align:center;font-family:arial black, sans-serif;line-height:1;
+    }
+</style>
+
+<body style="background:#EEE url('http://report.az/storage/news/3a0924751e281bc042f5533a2e5ca66b/e14cf397-b26b-452b-bcec-911d3146da2f.jpg') top right no-repeat; background-repeat: no-repeat; background-attachment: fixed;">
+    <div class="container">
+        <h1 style="text-align: center;">Welcome!</h1>
+        <table class="table" style="margin-top: 50px;">
+            <thead>
+            <tr>
+                <th>Date</th>
+                <th>Login</th>
+                <th>Summary</th>
+                <th>Precip intensity</th>
+                <th>Precip probability</th>
+                <th>Temperature</th>
+                <th>Dew point</th>
+                <th>Humidity</th>
+                <th>Wind speed</th>
+                <th>Wind Bearing</th>
+                <th>Visibility</th>
+                <th>Pressure</th>
+                <th>Ozone</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="weather,iterationStatus  : ${weatherEntities}" class="success">
+                <td style="background-color: green;" th:text="${weather.date}"/>
+                <td class="login" th:text="${weather.login}"/>
+                <td th:text="${weather.summary}"/>
+                <td th:text="${weather.precipIntensity}"/>
+                <td th:text="${weather.precipProbability}"/>
+                <td style="background-color: orange;" th:text="${weather.temperature}"/>
+                <td th:text="${weather.dewPoint}"/>
+                <td th:text="${weather.humidity}"/>
+                <td th:text="${weather.windSpeed}"/>
+                <td th:text="${weather.windBearing}"/>
+                <td th:text="${weather.visibility}"/>
+                <td th:text="${weather.pressure}"/>
+                <td th:text="${weather.ozone}"/>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

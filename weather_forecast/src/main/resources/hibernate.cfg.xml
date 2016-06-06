@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.username">postgres</property>
+        <property name="hibernate.connection.password">baza</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/forecast</property>
+
+
+
+        <property name="connection_pool_size">1</property>
+
+
+        <property name="show_sql">true</property>
+
+        <property name="hibernate.connection.autocommit">true</property>
+        <property name="hibernate.classloading.use_current_tccl_as_parent">false</property>
+
+
+
+        <mapping class="com.weather.WeatherEntity"/>
+
+    </session-factory>
+</hibernate-configuration>
